@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login & Registration Form | helpme_coder</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="Sign-in form">
+    <header>Sign in</header>
+    <form action="#">
+      <input type="text" placeholder="Enter email">
+      <div class="password-field">
+        <input type="password" placeholder="Enter password">
+        <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility()">&#128065;</button>
+      </div>
+      <a href="#">Forgot password?</a>
+      <input type="button" class="button" value="Login">
+    </form>
+    <div class="signup">
+      <span class="signup">Don't have an account?</span>
+      <label for="check">Signup</label>
+    </div>
+  </div> <!-- Added closing tag for the "Sign-in form" div -->
+</div>
+<script>
+    function togglePasswordVisibility() {
+      var passwordField = document.querySelector('.password-field input[type="password"]');
+      var passwordToggleBtn = document.querySelector('.password-toggle-btn');
+      
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        passwordToggleBtn.innerHTML = "&#128064;"; // Eye icon closed
+      } else {
+        passwordField.type = "password";
+        passwordToggleBtn.innerHTML = "&#128065;"; // Eye icon open
+      }
+    }
+    </script>
+    
+    
+</body>
+</html>
